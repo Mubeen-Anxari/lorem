@@ -21,7 +21,7 @@ export default function Home() {
     setCount(Number(event.target.value));
   };
 
-  const onSubmitHandler = (e: React.FormEvent<HTMLFormElement>) => {
+  const onSubmitHandlers = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     let amount = parseInt(count.toString());
     if (amount <= 0) {
@@ -35,7 +35,7 @@ export default function Home() {
 
   return (
     <form
-      onSubmit={onSubmitHandler}
+      onSubmit={onSubmitHandlers}
       className="flex flex-col justify-center items-center mt-10"
     >
       <div className="flex gap-2">
